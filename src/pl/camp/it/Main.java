@@ -3,7 +3,11 @@ package pl.camp.it;
 public class Main {
     public static void main(String[] args) {
 
-        cos();
+        try {
+            cos2();
+        } catch (MojWyjatek w){
+            
+        }
 
         /*try {
             cos();
@@ -37,7 +41,11 @@ public class Main {
         System.out.println("Cos sie działo dalej !!!");*/
     }
 
-    public static Object cos() {
+    public static void cos2() throws MojWyjatek {
+        cos();
+    }
+
+    public static Object cos() throws MojWyjatek {
         throw new MojWyjatek();
     }
 }
